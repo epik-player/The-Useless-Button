@@ -54,8 +54,7 @@
 
   <script>
     function generateRandomURL() {
-      const categories = [
-        // Social Media
+      const websites = [
         'https://www.reddit.com/r/funny/',
         'https://www.boredpanda.com/',
         'https://www.tumblr.com/',
@@ -66,8 +65,6 @@
         'https://www.facebook.com/',
         'https://www.pinterest.com/',
         'https://www.linkedin.com/',
-
-        // News & Media
         'https://www.nytimes.com/',
         'https://www.bbc.com/',
         'https://www.cnn.com/',
@@ -77,8 +74,6 @@
         'https://www.bloomberg.com/',
         'https://www.foxnews.com/',
         'https://www.reuters.com/',
-
-        // Education & Learning
         'https://www.wikipedia.org/',
         'https://www.khanacademy.org/',
         'https://www.coursera.org/',
@@ -86,8 +81,6 @@
         'https://www.udemy.com/',
         'https://www.academia.edu/',
         'https://www.stackoverflow.com/',
-
-        // Entertainment
         'https://www.netflix.com/',
         'https://www.youtube.com/',
         'https://www.spotify.com/',
@@ -95,8 +88,6 @@
         'https://www.pandora.com/',
         'https://www.imdb.com/',
         'https://www.rottentomatoes.com/',
-
-        // Technology
         'https://www.github.com/',
         'https://www.stackoverflow.com/',
         'https://www.medium.com/',
@@ -104,8 +95,6 @@
         'https://www.wired.com/',
         'https://www.techcrunch.com/',
         'https://www.theverge.com/',
-
-        // Shopping & Deals
         'https://www.amazon.com/',
         'https://www.ebay.com/',
         'https://www.etsy.com/',
@@ -114,8 +103,6 @@
         'https://www.bestbuy.com/',
         'https://www.homedepot.com/',
         'https://www.aliexpress.com/',
-
-        // Games
         'https://www.roblox.com/',
         'https://www.mojang.com/',
         'https://www.steampowered.com/',
@@ -124,8 +111,6 @@
         'https://www.xbox.com/',
         'https://www.playstation.com/',
         'https://www.nintendo.com/',
-
-        // Random Fun
         'https://www.theuselessweb.com/',
         'https://www.randomwordgenerator.com/',
         'https://www.sporcle.com/',
@@ -136,8 +121,6 @@
         'https://www.wherethefuckismatt.com/',
         'https://www.staggeringbeauty.com/',
         'https://www.fallingfalling.com/',
-
-        // Science & Nature
         'https://www.nasa.gov/',
         'https://www.nationalgeographic.com/',
         'https://www.scientificamerican.com/',
@@ -145,8 +128,6 @@
         'https://www.newscientist.com/',
         'https://www.popsci.com/',
         'https://www.smithsonianmag.com/',
-
-        // Random Joke / Pranks
         'https://www.funnyordie.com/',
         'https://www.9gag.com/',
         'https://www.memebase.com/',
@@ -154,15 +135,13 @@
         'https://www.theonion.com/',
         'https://www.laughingplace.com/',
         'https://www.jokes.com/'
+        'https://google.com/'
+        'chrome://'
       ];
 
-      // Generate random index for category
-      const randomCategoryIndex = Math.floor(Math.random() * categories.length);
-      const randomBaseURL = categories[randomCategoryIndex];
-
-      // Add random suffix (i.e., query params, search terms, etc.)
-      const randomSuffix = Math.random().toString(36).substring(2, 15);
-      return randomBaseURL + randomSuffix;
+      // Generate random index for website
+      const randomIndex = Math.floor(Math.random() * websites.length);
+      return websites[randomIndex];
     }
 
     function goRandom() {
