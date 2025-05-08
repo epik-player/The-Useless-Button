@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Useless Button</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+      font-size: 2em;
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    button {
+      font-size: 2rem;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff007f;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(255, 0, 127, 0.5);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e60073;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8em;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>TAKE ME SOMEWHERE USELESS</h1>
+  <button onclick="goSomewhereUseless()">PLEASE</button>
+
+  <footer>Inspired by theuselessweb.com</footer>
+
+  <script>
+    const sites = [
+      // Existing + fun random
+      "https://theuselessweb.com",
+      "https://thisissand.com",
+      "https://floatingqrcode.com",
+      "http://doughnutkitten.com",
+      "https://github.com",
+      "https://roblox.com",
+      "https://minecraft.net",
+      "https://now.gg/play/roblox-corporation/5349/roblox",
+      "https://www.ducksters.com",
+      "http://scroll-o-meter.club",
+      "https://pointerpointer.com",
+      "https://blocked.goguardian.com/teacher/block.html",
+      "http://yeahlemons.com",
+      "https://geometrytip.online",
+      "https://morsecode.world/international/translator.html",
+      "about:blank",
+      "https://therandombutton.github.io",
+      "https://hackertyper.net",
+      "https://thegeekboiz.github.io/PythonScratcher/youareanidiot/index.html",
+      "https://blocked.goguardian.com",
+      "http://www.patience-is-a-virtue.org",
+      "https://iframe-generator.org",
+      "chrome://dino",
+
+      // Fun & useless picks
+      "https://heeeeeeeey.com",
+      "https://www.staggeringbeauty.com",
+      "https://endless.horse",
+      "https://ninjaflex.com",
+      "https://corndog.io",
+      "https://www.rrrgggbbb.com",
+      "https://www.koalastothemax.com",
+      "https://www.fallingfalling.com",
+      "https://www.zoomquilt.org",
+      "https://www.smashthewalls.com",
+      "https://www.omfgdogs.com",
+      "https://thisisnotajumpscare.com",
+      "https://beesbeesbees.com",
+      "https://cat-bounce.com",
+      "https://longdogechallenge.com",
+      "https://zombo.com",
+      "https://www.rrrgggbbb.com",
+      "https://clickclickclick.click",
+      "https://pixelsfighting.com",
+      "https://eelslap.com",
+      "https://trypap.com",
+      "https://leekspin.com",
+      "https://toadstool.ch",
+      "https://aprilfoolsdayontheweb.com",
+      "https://cant-not-tweet-this.com",
+      "https://fartscroll.com",
+      "https://www.nyan.cat",
+      "https://screaminggoat.io"
+    ];
+
+    function goSomewhereUseless() {
+      const randomIndex = Math.floor(Math.random() * sites.length);
+      const url = sites[randomIndex];
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
