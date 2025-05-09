@@ -33,14 +33,22 @@
       padding: 15px 30px;
       border: none;
       border-radius: 8px;
-      background-color: #ff007f;
       color: #fff;
       cursor: pointer;
-      transition: background 0.3s ease;
+      animation: rgbGlow 3s infinite linear;
+      box-shadow: 0 0 20px rgba(255, 0, 127, 0.7);
+      transition: transform 0.2s ease;
     }
 
     button:hover {
-      background-color: #e60073;
+      transform: scale(1.05);
+    }
+
+    @keyframes rgbGlow {
+      0%   { background-color: rgb(255, 0, 0); box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
+      33%  { background-color: rgb(0, 255, 0); box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); }
+      66%  { background-color: rgb(0, 0, 255); box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); }
+      100% { background-color: rgb(255, 0, 0); box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
     }
 
     footer {
@@ -90,7 +98,7 @@
       setTimeout(() => {
         const randomSite = sites[Math.floor(Math.random() * sites.length)];
         window.open(randomSite, '_blank');
-        wrapper.style.opacity = '1'; // fade back in original page
+        wrapper.style.opacity = '1';
       }, 2000);
     }
   </script>
