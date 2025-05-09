@@ -63,7 +63,7 @@
 
   <div id="pageWrapper">
     <h1>TAKE ME TO A RANDOM SITE</h1>
-    <button onclick="startFadeAndRedirect()">PLEASE</button>
+    <button id="launchBtn">PLEASE</button>
     <footer>Inspired by The Useless Web</footer>
   </div>
 
@@ -91,16 +91,16 @@
       "https://cant-not-tweet-this.com"
     ];
 
-    function startFadeAndRedirect() {
+    document.getElementById("launchBtn").addEventListener("click", () => {
       const wrapper = document.getElementById('pageWrapper');
       wrapper.style.opacity = '0';
 
       setTimeout(() => {
         const randomSite = sites[Math.floor(Math.random() * sites.length)];
         window.open(randomSite, '_blank');
-        wrapper.style.opacity = '1';
+        wrapper.style.opacity = '1'; // restore visibility for this tab
       }, 2000);
-    }
+    });
   </script>
 
 </body>
