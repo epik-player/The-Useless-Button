@@ -1,4 +1,62 @@
-"https://theuselessweb.com",
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Useless Button</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+      font-size: 2em;
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    button {
+      font-size: 2rem;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff007f;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(255, 0, 127, 0.5);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e60073;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8em;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>TAKE ME SOMEWHERE USELESS</h1>
+  <button onclick="goSomewhereUseless()">PLEASE</button>
+
+  <footer>Inspired by https://theuselessweb.com</footer>
+
+  <script>
+    const sites = [
+      "https://theuselessweb.com",
       "https://thisissand.com",
       "https://floatingqrcode.com",
       "http://doughnutkitten.com",
@@ -127,3 +185,14 @@
       "https://www.boredoutofmyhead.com",
       "http://www.followtheline.com",
       "http://www.teambuilder.co.uk"
+    ];
+
+    function goSomewhereUseless() {
+      const randomIndex = Math.floor(Math.random() * sites.length);
+      const url = sites[randomIndex];
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
