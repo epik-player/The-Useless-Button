@@ -4,15 +4,21 @@
   <meta charset="UTF-8" />
   <title>Quirky Site Launcher</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       background-color: #000;
-      color: #fff;
+      height: 100%;
+      width: 100%;
+    }
+
+    #pageWrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      color: #fff;
       font-family: Arial, sans-serif;
       transition: opacity 2s ease;
       opacity: 1;
@@ -45,11 +51,13 @@
     }
   </style>
 </head>
-<body id="page">
+<body>
 
-  <h1>TAKE ME TO A RANDOM SITE</h1>
-  <button onclick="startFadeAndRedirect()">PLEASE</button>
-  <footer>Inspired by The Useless Web</footer>
+  <div id="pageWrapper">
+    <h1>TAKE ME TO A RANDOM SITE</h1>
+    <button onclick="startFadeAndRedirect()">PLEASE</button>
+    <footer>Inspired by The Useless Web</footer>
+  </div>
 
   <script>
     const sites = [
@@ -76,13 +84,13 @@
     ];
 
     function startFadeAndRedirect() {
-      const page = document.getElementById('page');
-      page.style.opacity = '0'; // fade out
+      const wrapper = document.getElementById('pageWrapper');
+      wrapper.style.opacity = '0';
 
       setTimeout(() => {
         const randomSite = sites[Math.floor(Math.random() * sites.length)];
-        window.open(randomSite, '_blank'); // open site
-        page.style.opacity = '1'; // fade back in
+        window.open(randomSite, '_blank');
+        wrapper.style.opacity = '1'; // fade back in original page
       }, 2000);
     }
   </script>
